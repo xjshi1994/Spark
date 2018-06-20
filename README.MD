@@ -4,7 +4,8 @@
 >> DataFram is RDDS full of records with detailed schema
 ### 2. How to start
 >> 1. create sparkSession
->> 2. '''scala
+>> 2.
+ '''scala
 	import org.apache.spark.sql.SparkSession
 	val spark = SparkSession
 	.builder()
