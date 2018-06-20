@@ -11,13 +11,15 @@
 	.appName("My App")
 	.getOrCreate()'''
 * 3. Example of creating dataFrame
-	** (1a) create dataframe from RDD, schema reflectively inferred
-		> val tupleRDD = .....// assume RDD[(int, String, String)]
-		> val tupleDF = tupleRDD.toDF("bid", "bookname", "publishDate")  
-  		// if you have an RDD containing sonme kind of class instance  
-		case class Person(id: Int, name: String, city: String)
-		val peopleRDD = ....
-		val peopleDF = peopleRDD.toDF
-	** (1b) create dataframe existing RDD, schema explicitly specified
+	* (1a) create dataframe from RDD, schema reflectively inferred  
+	'''java
+	val tupleRDD = .....// assume RDD[(int, String, String)]    
+	val tupleDF = tupleRDD.toDF("bid", "bookname", "publishDate")  
+	// if you have an RDD containing sonme kind of class instance  
+	case class Person(id: Int, name: String, city: String)  
+	val peopleRDD = ....  
+	val peopleDF = peopleRDD.toDF  
+	'''
+	* (1b) create dataframe existing RDD, schema explicitly specified
 
 
